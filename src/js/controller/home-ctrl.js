@@ -25,5 +25,5 @@ app.controller("HomeCtrl",["$scope","$rootScope","anchorSmoothScroll","$location
     	$http.get("http://iligtas.ph/intELECT/get_feeds.php").then(function(response){
 	    	$scope.tweets = response.data;
 	    })
-    },30000);
+    },15000);
 }]);

@@ -1,3 +1,11 @@
+function logout(){
+  FB.logout(function(response) {
+    // user is now logged out
+    console.log(response);
+  });  
+}
+
+
 function statusChangeCallback(response) {
     console.log(response);
     // The response object is returned with a status field that lets the
@@ -24,6 +32,14 @@ function statusChangeCallback(response) {
   // code below.
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
+      FB.api(
+          "/{user-id}/picture",
+          function (response) {
+            if (response && !response.error) {
+              /* handle the result */
+            }
+          }
+      );
       statusChangeCallback(response);
     });
   }
@@ -66,7 +82,7 @@ function statusChangeCallback(response) {
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
+    FB.api('/me',{fields: ['name','picture']}, function(response) {
       console.log(response);
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
