@@ -16,6 +16,7 @@ app.controller("MainCtrl",["$scope","$rootScope","$location","$http",function($s
     	});
     }*/
     $scope.logout = function(){
+        console.log("logout");
       FB.logout(function(response) {
         // user is now logged out
         console.log(response);

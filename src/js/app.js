@@ -43,7 +43,7 @@ app.config(function($routeProvider,$locationProvider){
 
 	.when("/issues",{
 		templateUrl:"templates/issues.html",
-		controller:"IssuesCtrl"
+		controller:"ProfileCtrl"
 
 	});
 });
