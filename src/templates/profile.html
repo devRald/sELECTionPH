@@ -1,58 +1,45 @@
+<img src="{{presimg}}" style="width:100%">
 <div class="row">
-      <img src="img/binaycover.jpg" style="width:100%">
-</div>
-
-<div class="row">
-  <div class="col s8">
+  <div class="col s12 m6">
      <ul class="collapsible" data-collapsible="accordion">
-      <li ng-repeat="issue in issues">
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Makati issues</div>
-        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+      <li ng-repeat="issue in presissue">
+        <div class="collapsible-header"> {{issue.issue}}<a class="secondary-content"><b>{{issue.summary}}</b></a></div>
+        <div class="collapsible-body"><p>{{issue.quote}}<br><a href="{{issue.source}}">{{issue.source}}</a></p></div>
       </li>
     </ul>
   </div>
 
-  <div class="col s4">
-     
+  <div class="col s12 m6">
+	  <ul class="collection">
+	    <li class="collection-item avatar" ng-repeat="tweet in prestweet">
+	      <img src="{{tweet.tweet_img}}" alt="" class="circle">
+	      <span class="title" style="font-weight:bolder;">{{tweet.tweet_user}}</span> @{{tweet.tweet_screen}}
+	      <p>{{tweet.tweet_text}}
+	      </p>
+	      <a class="secondary-content" ng-click="rt(tweet.tweet_idstr)"><i class="mf mf-2x mf-retweet" aria-hidden="true"></i></a>
+	    </li>
+	  </ul>
+  </div>
+</div>
 
-  <ul class="collection">
-    <li class="collection-item avatar">
-      <img src="img/poe2.jpg" alt="" class="circle">
-      <span class="title">GracePoe | @PoePoe</span>
-      <p> #TeamBinay na ituuuu HAHAAHHAHA <br> 
-        
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <img src="img/poe2.jpg" alt="" class="circle">
-      <span class="title">GracePoe | @PoePoe</span>
-      <p>#TeamBinay na ituuuu HAHAAHHAHA  <br>
-        
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-     <img src="img/poe2.jpg" alt="" class="circle">
-      <span class="title">GracePoe | @PoePoe</span>
-      <p>#TeamBinay na ituuuu HAHAAHHAHA  <br>
-       
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-   
+
+
+  <ul class="collection with-header">
+  <li class="collection-header"> <h4> Feeds </h4> </li>
+    <li class="collection-item avatar" ng-repeat="message in messages">
+      <img src="img/duterte.jpg" alt="" class="circle">
+      <span class="title" style="font-weight:bold;">{{message.name}}</span>
+      <p>{{message.status}}</p>
+      </li>
+      <li class="collection-item" style="padding:5">
+      	<input placeholder="comment" id="first_name2" type="text" class="validate" ng-enter="sendComment()" ng-model="txt"><a class="btn-floating btn-large waves-effect waves-light hide-on-med-and-down red" style="margin-left:5px"><i class="material-icons">add</i></a>
+      </li>
   </ul>
-</div>
 
-</div>
+
+
+
+
 
 
 <footer class="page-footer blue darken-5">

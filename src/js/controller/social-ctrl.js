@@ -1,6 +1,6 @@
 app.controller("SocialCtrl",["$scope","$location","$firebaseArray",function($scope,$location,$firebaseArray){
   var ref = new Firebase("https://halalan2016.firebaseio.com/");
-  $scope.messages = $firebaseArray(ref);
+  $scope.messages = $firebaseArray(ref.limitToFirst(50));
   console.log($scope.messages);
   $('.tooltipped').tooltip({delay: 50});
 

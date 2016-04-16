@@ -36,7 +36,7 @@ app.config(function($routeProvider,$locationProvider){
 		controller: "FbCtrl"
 	})
 
-	.when("/profile",{
+	.when("/profile/:presid",{
 		templateUrl: "templates/profile.html",
 		controller: "ProfileCtrl"
 	})

@@ -41,4 +41,8 @@
 }
 .mf-retweet:before{
   content: "\f079";
-};
+}
+
+.yes:before{
+  content: : "\f164 ";
+}
