@@ -27,7 +27,11 @@ app.controller("HomeCtrl",["$scope","$rootScope","anchorSmoothScroll","$location
 	    })
     },15000);
 
+    $http.get("../assets/president.json").then(function(response){
+      $scope.pres = response.data;
+    });
+
 
     var deadline = new Date(2016,4,8,24,60,60,60);
-  initializeClock('clockdiv', deadline);
+    initializeClock('clockdiv', deadline);
 }]);

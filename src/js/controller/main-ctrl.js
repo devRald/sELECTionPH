@@ -12,9 +12,13 @@ app.controller("MainCtrl",["$scope","$rootScope","$location","$http",function($s
     				$scope.presidents.push(response.data[i]);
     			}
     		}
-    		console.log($scope.presidents);
+//    		console.log($scope.presidents);
     	});
     }
 
     $scope.testData();
+
+    $scope.showMore = function() {
+        console.log('show more triggered');  
+    };
 }]);

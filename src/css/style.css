@@ -22,7 +22,9 @@ body, html
     margin-bottom: 50px;
    
 }
-
+.logo-img{
+    position:absolute;
+}
 .intro h1
 {
     font-weight: 900;
@@ -129,16 +131,7 @@ body, html
 .brand-logo{
     margin-left: 20px;
 }
-.brand-logo:before{
-    content: '';
-    position: absolute;
-    bottom:-28px;
-    border:50px solid;
-    width:100%;
-    border-color: white;
-    border-bottom-color: transparent;
-    z-index: -1;
-}
+
 
 #submit1{
     font-weight: bold;
@@ -193,10 +186,10 @@ body, html
     padding: 10px;
     border-radius: 100px;
       
-    background: rgba(0,0,0,0.5) ;
+    background: rgba(80,97,212,1) ;
     display: inline-block;
-    width:150px;
-    height: 150px;
+    width:180px;
+    height: 180px;
     border-style: solid;
     border-color: white;
     border-width: 5px;

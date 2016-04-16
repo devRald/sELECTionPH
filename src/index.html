@@ -20,11 +20,14 @@
 
 
 
-    <body ng-app="myApp" ng-controller="MainCtrl">
+    <body ng-app="myApp" ng-controller="MainCtrl" scroll>
     <div class="navbar-fixed" id="middle">
     <nav>
     <div class="nav-wrapper  grey lighten-4">
-      <a href="#!" class="brand-logo hide-on-med-and-down" ng-href="/#/"> <img src="img/Phlogo.png" style="width:100px; height=100px;"> </a>
+
+   
+
+      <a href="#!" class="brand-logo hide-on-med-and-down" ng-href="/#/"> <img src="img/logs.png" class="logo-img" style="width:100px; height=100px;"> </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse" ><i class="material-icons red-text text-lighten-2">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li class="waves-effect waves-red" ng-class="{ active: isActive('/')}"><a href="/#/" class="grey-text text-darken-4">HOME</a></li>
@@ -35,10 +38,11 @@
       
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li class="active"><a href="#">Profile</a></li>
-        <li><a href="#">Campaign</a></li>
-        <li><a href="#">Latest News</a></li>
-        <li><a href="#">Ranking</a></li>
+        <li class="active"><a href="#">HOME</a></li>
+        <li><a href="#">HEATMAP</a></li>
+        <li><a href="#">LATEST NEWS</a></li>
+        <li><a href="#">RANKING</a></li>
+        <li><a href="#">DISCUSSION</a></li>
       </ul>
     </div>
   </nav>

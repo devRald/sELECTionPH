@@ -3505,14 +3505,8 @@ input[type=range] + .thumb {
   right: auto;
 }
 
-.row .col.s25 {
+.row .col.s13 {
   width: 20%;
-  margin-left: auto;
-  left: auto;
-  right: auto;
-}
-.row .col.m25 {
-  width: 16.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
@@ -3745,6 +3739,12 @@ input[type=range] + .thumb {
     left: auto;
     right: auto;
   }
+  .row .col.m13 {
+    width: 20%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
   .row .col.m3 {
     width: 25%;
     margin-left: auto;
@@ -3930,6 +3930,12 @@ input[type=range] + .thumb {
   }
   .row .col.l3 {
     width: 25%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  .row .col.l13 {
+    width: 20%;
     margin-left: auto;
     left: auto;
     right: auto;
