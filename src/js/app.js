@@ -37,6 +37,7 @@ app.config(function($routeProvider,$locationProvider){
 	})
 
 	.when("/profile",{
-		templateUrl: "templates/profile.html"
+		templateUrl: "templates/profile.html",
+		controller: "ProfileCtrl"
 	});
 });
