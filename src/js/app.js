@@ -17,5 +17,9 @@ app.config(function($routeProvider,$locationProvider){
 	.when("/fb",{
 		templateUrl: "templates/fb.html",
 		controller: "FbCtrl"
+	})
+
+	.when("/profile",{
+		templateUrl: "templates/profile.html"
 	});
 });

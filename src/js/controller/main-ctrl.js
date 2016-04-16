@@ -5,8 +5,14 @@ app.controller("MainCtrl",["$scope","$rootScope","$location","$http",function($s
     };
 
     $scope.testData = function(){
-    	$http.get("http://api.bilangpilipino.com/api-bilang-pilipino/api/candidates/2016?key=H5qWcTYm5&token=hmXtL0GEKjG5WFdN68pYOKBSU1oq").then(function(response){
-    		
+    	$http.get("../assets/runners.json").then(function(response){
+    		$scope.presidents = [];
+    		for(var i=0;i<response.data.length;i++){
+    			if(response.data[i].running_position=="President"){
+    				$scope.presidents.push(response.data[i]);
+    			}
+    		}
+    		console.log($scope.presidents);
     	});
     }
 
