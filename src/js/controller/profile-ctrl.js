@@ -23,8 +23,10 @@ app.controller("ProfileCtrl",["$scope","$location","$http","$routeParams","$inte
     $scope.sendComment = function(e){
       $scope.messages.$add({
         status: $scope.txt,
-        name:"Joanna"
+        image:JSON.parse(sessionStorage.getItem("userdata")).img, 
+        name:JSON.parse(sessionStorage.getItem("userdata")).name
       });
+      $scope.txt = "";
     }
     //switch
     switch($scope.p_id){
@@ -54,6 +56,8 @@ app.controller("ProfileCtrl",["$scope","$location","$http","$routeParams","$inte
         });
         break;
       case '2':
+        var ref = new Firebase("https://halalan2016.firebaseio.com/miriam");
+        $scope.messages = $firebaseArray(ref.limitToFirst(50));
         $scope.presimg = "img/miriamcover.jpg";
         $http.get("../assets/miriam.json").then(function(response){
            $scope.presissue = response.data;
@@ -76,6 +80,8 @@ app.controller("ProfileCtrl",["$scope","$location","$http","$routeParams","$inte
         });
         break;
       case '3':
+        var ref = new Firebase("https://halalan2016.firebaseio.com/duterte");
+        $scope.messages = $firebaseArray(ref.limitToFirst(50));
         $scope.presimg = "img/dutertecover.jpg";
         $http.get("../assets/duterte.json").then(function(response){
            $scope.presissue = response.data;
@@ -98,6 +104,8 @@ app.controller("ProfileCtrl",["$scope","$location","$http","$routeParams","$inte
           });
         break;
       case '4':
+        var ref = new Firebase("https://halalan2016.firebaseio.com/poe");
+        $scope.messages = $firebaseArray(ref.limitToFirst(50));
         $scope.presimg = "img/poecover.jpg";
         $http.get("../assets/poe.json").then(function(response){
            $scope.presissue = response.data;
@@ -121,6 +129,8 @@ app.controller("ProfileCtrl",["$scope","$location","$http","$routeParams","$inte
           });
         break;
         case '5':
+        var ref = new Firebase("https://halalan2016.firebaseio.com/roxas");
+        $scope.messages = $firebaseArray(ref.limitToFirst(50));
         $scope.presimg = "img/marcover.jpg";
         $http.get("../assets/mar.json").then(function(response){
            $scope.presissue = response.data;

@@ -27,12 +27,12 @@
   <ul class="collection with-header">
   <li class="collection-header"> <h4> Feeds </h4> </li>
     <li class="collection-item avatar" ng-repeat="message in messages">
-      <img src="img/duterte.jpg" alt="" class="circle">
+      <img src="{{message.image}}" alt="" class="circle">
       <span class="title" style="font-weight:bold;">{{message.name}}</span>
       <p>{{message.status}}</p>
       </li>
       <li class="collection-item" style="padding:5">
-      	<input placeholder="comment" id="first_name2" type="text" class="validate" ng-enter="sendComment()" ng-model="txt"><a class="btn-floating btn-large waves-effect waves-light hide-on-med-and-down red" style="margin-left:5px"><i class="material-icons">add</i></a>
+      	<input placeholder="comment" ng-readonly="showLogin" id="first_name2" type="text" class="validate" ng-enter="sendComment()" ng-model="txt"><a class="btn-floating btn-large waves-effect waves-light hide-on-med-and-down red" style="margin-left:5px"><i class="material-icons">add</i></a>
       </li>
   </ul>
 

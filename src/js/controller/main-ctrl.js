@@ -1,9 +1,9 @@
 app.controller("MainCtrl",["$scope","$rootScope","$location","$http",function($scope,$rootScope,$location,$http){
+    var host ="192.168.1.10";
 	 var key = "H5qWcTYm5" , token = "hmXtL0GEKjG5WFdN68pYOKBSU1oq";
 	 $scope.isActive = function (viewLocation) { 
         return viewLocation === $location.path();
     };
-
     /*$scope.testData = function(){
     	$http.get("../assets/runners.json").then(function(response){
     		$scope.presidents = [];
@@ -15,10 +15,12 @@ app.controller("MainCtrl",["$scope","$rootScope","$location","$http",function($s
 //    		console.log($scope.presidents);
     	});
     }*/
-    function logout(){
+    $scope.logout = function(){
       FB.logout(function(response) {
         // user is now logged out
         console.log(response);
+        $rootScope.setLogin(true);
+        sessionStorage.removeItem("userdata");
       });  
     }
 
@@ -111,10 +113,13 @@ app.controller("MainCtrl",["$scope","$rootScope","$location","$http",function($s
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me',{fields: ['name','picture']}, function(response) {
           console.log(response);
-          $http.post("http://localhost/ELECTIONPH/__checkUser.php",{mydata:response}).then(function(res){
-             console.log(res.data);
-          });
-          sessionStorage.setItem("userdata",JSON.stringify(response));
+          if(sessionStorage.getItem("userdata")===null){
+              $http.post("http://"+host+"/ELECTIONPH/__getUserdata.php",{mydata:response}).then(function(res){
+                console.log(res.data);
+                sessionStorage.setItem("userdata",JSON.stringify(res.data));
+                $rootScope.setLogin(false);
+              });
+          }
           console.log('Successful login for: ' + response.name);
           document.getElementById('status').innerHTML =
             'Thanks for logging in, ' + response.name + '!';
@@ -128,9 +133,15 @@ app.controller("MainCtrl",["$scope","$rootScope","$location","$http",function($s
            console.log('Welcome!  Fetching your information.... ');
            FB.api('/me',{fields: ['name','picture']}, function(response) {
              console.log('Good to see you, ' + response.name + '.');
-             $http.post("http://localhost/ELECTIONPH/__checkUser.php",{mydata:response}).then(function(res){
-                console.log(res.data);
-             });
+                $http.post("http://"+host+"/ELECTIONPH/__checkUser.php",{mydata:response}).then(function(res){
+                    if(res.data=="done"){
+                        $http.post("http://"+host+"/ELECTIONPH/__getUserdata.php",{mydata:response}).then(function(res){
+                            console.log(res.data);
+                            sessionStorage.setItem("userdata",JSON.stringify(res.data));
+                            $rootScope.setLogin(false);
+                          });
+                    }
+                });
            });
           } else {
            console.log('User cancelled login or did not fully authorize.');
