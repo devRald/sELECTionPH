@@ -26,4 +26,8 @@ app.controller("HomeCtrl",["$scope","$rootScope","anchorSmoothScroll","$location
 	    	$scope.tweets = response.data;
 	    })
     },15000);
+
+
+    var deadline = new Date(2016,4,8,24,60,60,60);
+  initializeClock('clockdiv', deadline);
 }]);
