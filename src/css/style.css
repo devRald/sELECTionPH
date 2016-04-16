@@ -1,0 +1,180 @@
+body, html
+{
+    background-color: #EDEDED !important;
+}
+
+
+  html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
+#map-container{
+    width:70%;
+    display: block;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.intro
+{
+    text-align: center;
+    padding-top: 13%;
+    padding-bottom: 13%;
+    margin-bottom: 50px;
+   
+}
+
+.intro h1
+{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.intro h5
+{
+    text-transform: uppercase;
+   
+    padding: 10px;
+    color: #333333;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+
+.about .col
+{
+    margin-bottom: 24px;
+}
+
+.about h5
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.about h6
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+
+.about hr
+{
+    width: 40px;
+    margin-bottom: 45px;
+}
+
+.about .card
+{
+    text-align: center;
+}
+
+.portfolio .col
+{
+    margin-bottom: 24px;
+}
+
+.portfolio h5
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.portfolio h6
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+
+.portfolio hr
+{
+    width: 100px;
+    margin-bottom: 45px;
+}
+
+.portfolio .portfolio-holder
+{
+    clear: both;
+    text-align: center;
+}
+
+.portfolio img
+{
+    width: 33%;
+    display: inline-block;
+    float: left;
+
+}
+
+#promo1{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: -17px;
+
+}
+#promo2{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: -17px;    
+}
+#promo3{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: -17px;
+}
+
+.brand-logo{
+    margin-left: 20px;
+}
+.brand-logo:before{
+    content: '';
+    position: absolute;
+    bottom:-28px;
+    border:50px solid;
+    width:100%;
+    border-color: white;
+    border-bottom-color: transparent;
+    z-index: -1;
+}
+
+
+#submit1{
+    font-weight: bold;
+}  
+
+#submit2{
+    font-weight: bold;
+}
+
+/*responsiveness*/  
+@media only screen and (min-width : 200px) {
+    .title-discuss{
+        font-size: 24pt;
+    }  
+}
+
+@media only screen and (min-width : 300px) {
+    .title-discuss{
+        font-size: 24pt;
+    }  
+}
+@media only screen and (min-width : 601px) {
+     .title-discuss{
+        font-size: 36pt;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .title-discuss{
+        font-size: 42pt;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .title-discuss{
+        font-size: 48pt;
+    }
+}

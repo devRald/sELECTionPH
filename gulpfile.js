@@ -65,4 +65,4 @@ gulp.task('prettify', function() {
 });
 
 gulp.task('open', ['app']);
-gulp.task('default' , ['connect','watch','scripts']);
+gulp.task('default' , ['connect','watch']);

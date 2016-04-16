@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/style.css">
+      <link type="text/css" rel="stylesheet" href="css/myfonts.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>
+        
+          PhilUp
+
+      </title>
+    </head>
+
+
+
+
+    <body ng-app="myApp" ng-controller="MainCtrl">
+    <div class="navbar-fixed" id="middle">
+    <nav>
+    <div class="nav-wrapper  grey lighten-4">
+      <a href="#!" class="brand-logo hide-on-med-and-down" ng-href="/#/"> <img src="img/Phlogo.png" style="width:100px; height=100px;"> </a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse" ><i class="material-icons red-text text-lighten-2">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li class="waves-effect waves-red "><a href="#" class="grey-text text-darken-4">HOME</a></li>
+        <li class="waves-effect waves-red"><a href="#" class="grey-text text-darken-4">HEATMAP</a></li>
+        <li class="waves-effect waves-red"><a href="#" class="grey-text text-darken-4">LATEST NEWS</a></li>
+        <li class="waves-effect waves-red"><a href="#" class="grey-text text-darken-4">RANKING</a></li>
+          <li class="waves-effect waves-red"><a href="#" class="grey-text text-darken-4">DISCUSSION</a></li>
+      
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Campaign</a></li>
+        <li><a href="#">Latest News</a></li>
+        <li><a href="#">Ranking</a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+      
+<div ng-view></div>
+
+
+      
+      <!--Import jQuery before materialize.js-->
+      <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/heatmap.min.js"></script>
+      <script src="js/gmaps-heatmap.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/firebase.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+      <script src="js/fb.js"></script>
+      <script src="js/angular.js"></script>
+      <script src="js/angular-route.js"></script>
+      <script src="js/angularfire.min.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/controller/main-ctrl.js"></script>
+      <script src="js/controller/fb-ctrl.js"></script>
+      <script src="js/controller/home-ctrl.js"></script>
+      <script src="js/controller/social-ctrl.js"></script>
+      <script src="js/controller/heat-ctrl.js"></script>
+      <script src="js/service/smooth.min.js"></script>    
+
+      <script>
+      </script>
+
+
+    </body>
+  </html>
