@@ -1,35 +1,6 @@
 <div class="intro blue lighten-1 z-depth-1" style="height:16px !important;">
   <h1 class="grey-text text-lighten-5 title-discuss" style="margin-top:-60px !important;"> INFOGRAPHICS </h1>
 
-    <canvas id="mycanvas" width="256" height="256">
-    <script>
-      $(document).ready(function(){
-        var ctx = $("#mycanvas").get(0).getContext("2d");
-
-        //pie chart data
-        //sum of values = 360
-        var data = [
-          {
-            value: 270,
-            color: "cornflowerblue",
-            highlight: "lightskyblue",
-            label: "Corn Flower Blue"
-          },
-          {
-            value: 50,
-            color: "lightgreen",
-            highlight: "yellowgreen",
-            label: "Lightgreen"
-          },
-          {
-            value: 40,
-            color: "orange",
-            highlight: "darkorange",
-            label: "Orange"
-          }
-        ];
-
-        //draw
-        var piechart = new Chart(ctx).Pie(data);
-      });
-    </script>
+  <canvas id="doughnut" class="chart chart-doughnut"
+  chart-data="data" chart-labels="labels">
+</canvas> 
