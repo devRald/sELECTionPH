@@ -27,15 +27,15 @@
       <a href="#!" class="brand-logo hide-on-med-and-down" ng-href="/#/"> <img src="img/Phlogo.png" style="width:100px; height=100px;"> </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse" ><i class="material-icons red-text text-lighten-2">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li class="waves-effect waves-red active "><a href="#" class="grey-text text-darken-4">HOME</a></li>
-        <li class="waves-effect waves-red"><a href="#" class="grey-text text-darken-4">HEATMAP</a></li>
-        <li class="waves-effect waves-red"><a href="#" class="grey-text text-darken-4">LATEST NEWS</a></li>
-        <li class="waves-effect waves-red"><a href="#" class="grey-text text-darken-4">RANKING</a></li>
-          <li class="waves-effect waves-red"><a href="#" class="grey-text text-darken-4">DISCUSSION</a></li>
+        <li class="waves-effect waves-red" ng-class="{ active: isActive('/')}"><a href="/#/" class="grey-text text-darken-4">HOME</a></li>
+        <li class="waves-effect waves-red" ng-class="{ active: isActive('/heat')}"><a href="#" class="grey-text text-darken-4">HEATMAP</a></li>
+        <li class="waves-effect waves-red" ng-class="{ active: isActive('/social')}"><a href="#" class="grey-text text-darken-4">LATEST NEWS</a></li>
+        <li class="waves-effect waves-red" ng-class="{ active: isActive('/rank')}"><a href="#" class="grey-text text-darken-4">RANKING</a></li>
+          <li class="waves-effect waves-red" ng-class="{ active: isActive('/discuss')}"><a href="#" class="grey-text text-darken-4">DISCUSSION</a></li>
       
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="#">Profile</a></li>
+        <li class="active"><a href="#">Profile</a></li>
         <li><a href="#">Campaign</a></li>
         <li><a href="#">Latest News</a></li>
         <li><a href="#">Ranking</a></li>
