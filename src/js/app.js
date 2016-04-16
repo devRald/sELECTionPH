@@ -39,5 +39,11 @@ app.config(function($routeProvider,$locationProvider){
 	.when("/profile",{
 		templateUrl: "templates/profile.html",
 		controller: "ProfileCtrl"
+	})
+
+	.when("/issues",{
+		templateUrl:"templates/issues.html",
+		controller:"IssuesCtrl"
+
 	});
 });
