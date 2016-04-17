@@ -154,3 +154,4 @@ app.controller("ProfileCtrl",["$scope","$location","$http","$routeParams","$inte
         break;
     } //end switch
 }]);
+

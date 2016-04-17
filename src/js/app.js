@@ -41,9 +41,9 @@ app.config(function($routeProvider,$locationProvider){
 		controller: "ProfileCtrl"
 	})
 
-	.when("/issues",{
+	.when("/quiz",{
 		templateUrl:"templates/issues.html",
-		controller:"ProfileCtrl"
+		controller:"QuizCtrl"
 
 	});
 });

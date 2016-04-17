@@ -11,30 +11,28 @@
     <p> 1. PASS FREEDOM OF INFORMATION BILL?  </p>
     </div>
 
-    <div class="col m4">
-    <form action="">
-    <p class="valign-wrapper">
-      <input name="group1" type="radio" id="test1"/>
-      <label for="test1">Red</label>
+    <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group1" type="radio" id="test1" value="Yes" ng-model="ans[0].answer"/>
+      <label for="test1">Yes</label>
     </p>
     <p>
-      <input name="group1" type="radio" id="test2" />
-      <label for="test2">Yellow</label>
+      <input name="group1" type="radio" id="test2" value="No" ng-model="ans[0].answer"/>
+      <label for="test2">No</label>
     </p>
     <p>
-      <input class="with-gap" name="group1" type="radio" id="test3"  />
-      <label for="test3">Green</label>
+      <input name="group1" type="radio" id="test3" value="No Clear Stand" ng-model="ans[0].answer" />
+      <label for="test3">Undecided</label>
     </p>
-      <p>
-        <input name="group1" type="radio" id="test4" disabled="disabled" />
-        <label for="test4">Brown</label>
-    </p>
+      
   </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
@@ -43,20 +41,28 @@
     <p> 2. PASS ANTI-POLITICAL DYNASTY BILL?  </p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+    <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group2" type="radio" id="test4" value="Yes" ng-model="ans[1].answer"/>
+      <label for="test4">Yes</label>
+    </p>
+    <p>
+      <input name="group2" type="radio" id="test5" id="test4" value="No" ng-model="ans[1].answer" />
+      <label for="test5">No</label>
+    </p>
+    <p>
+      <input  name="group2" type="radio" id="test6" id="test4" value="No Clear Stand" ng-model="ans[1].answer" />
+      <label for="test6">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
@@ -65,20 +71,28 @@
     <p> 3. LOWER PERSONAL INCOME TAX?  </p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+   <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group3" type="radio" id="test7" value="Yes" ng-model="ans[3].answer"/>
+      <label for="test7">Yes</label>
+    </p>
+    <p>
+      <input name="group3" type="radio" id="test8" value="No" ng-model="ans[3].answer" />
+      <label for="test8">No</label>
+    </p>
+    <p>
+      <input name="group3" type="radio" id="test9"  value="No Clear Stand" ng-model="ans[3].answer" />
+      <label for="test9">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 
 <div class="row">
@@ -88,21 +102,28 @@
     <p> 4. PASS PROPOSED BANGSAMORO BASIC LAW? </p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+  <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group4" type="radio" id="test10"/>
+      <label for="test10">Yes</label>
+    </p>
+    <p>
+      <input name="group4" type="radio" id="test11" />
+      <label for="test11">No</label>
+    </p>
+    <p>
+      <input name="group4" type="radio" id="test12"  />
+      <label for="test12">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
-
+<hr>
 
 <div class="row">
 <div class="col m12">
@@ -111,20 +132,28 @@
     <p> 5. FIGHT FOR RIGHTS OVER WEST PHILIPPINE SEA? </p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+   <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group5" type="radio" id="test13"/>
+      <label for="test13">Yes</label>
+    </p>
+    <p>
+      <input name="group5" type="radio" id="test14" />
+      <label for="test13">No</label>
+    </p>
+    <p>
+      <input  name="group5" type="radio" id="test15"  />
+      <label for="test15">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
@@ -132,21 +161,28 @@
     <div class="col m8">
     <p> 6. PUSH FOR CHARTER CHANGE?  </p>
     </div>
-
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+<div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group6" type="radio" id="test16"/>
+      <label for="test16">Yes</label>
+    </p>
+    <p>
+      <input name="group6" type="radio" id="test17" />
+      <label for="test17">No</label>
+    </p>
+    <p>
+      <input  name="group6" type="radio" id="test18"  />
+      <label for="test18">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
@@ -155,20 +191,28 @@
     <p> 7. PROMOTE EQUAL RIGHTS FOR LGBTS?  </p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+   <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group7" type="radio" id="test19"/>
+      <label for="test19">Yes</label>
+    </p>
+    <p>
+      <input name="group7" type="radio" id="test20" />
+      <label for="test20">No</label>
+    </p>
+    <p>
+      <input name="group7" type="radio" id="test21"  />
+      <label for="test21">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
@@ -177,20 +221,28 @@
     <p>8. CONTINUE CONDITIONAL CASH TRANSFER PROGRAM?  </p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+    <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group8" type="radio" id="test22"/>
+      <label for="test22">Yes</label>
+    </p>
+    <p>
+      <input name="group8" type="radio" id="test23" />
+      <label for="test23">No</label>
+    </p>
+    <p>
+      <input  name="group8" type="radio" id="test24"  />
+      <label for="test24">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
@@ -199,20 +251,28 @@
     <p>9. SUPPORT JOB CONTRACTUALIZATION? </p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+   <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group9" type="radio" id="test25"/>
+      <label for="test25">Yes</label>
+    </p>
+    <p>
+      <input name="group9" type="radio" id="test26" />
+      <label for="test26">No</label>
+    </p>
+    <p>
+      <input name="group9" type="radio" id="test27"  />
+      <label for="test27">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
@@ -221,20 +281,28 @@
     <p>10. PUSH FOR THE PASSAGE OF A DIVORCE BILL?</p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+   <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group10" type="radio" id="test28"/>
+      <label for="test28">Yes</label>
+    </p>
+    <p>
+      <input name="group10" type="radio" id="test29" />
+      <label for="test29">No</label>
+    </p>
+    <p>
+      <input  name="group10" type="radio" id="test30"  />
+      <label for="test30">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 
 
@@ -245,206 +313,178 @@
     <p>11. BURY FERDINAND MARCOS' REMAINS AT THE LIBINGAN NG MGA BAYANI?</p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+   <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group11" type="radio" id="test30"/>
+      <label for="test30">Yes</label>
+    </p>
+    <p>
+      <input name="group11" type="radio" id="test31" />
+      <label for="test31">No</label>
+    </p>
+    <p>
+      <input name="group11" type="radio" id="test32"  />
+      <label for="test32">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
 
     <div class="col m8">
-    <p>14. SUPPORT LABOR EXPORT/OFW DEPLOYMENT?</p>
+    <p>12. SUPPORT LABOR EXPORT/OFW DEPLOYMENT?</p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+   <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group12" type="radio" id="test33"/>
+      <label for="test33">Yes</label>
+    </p>
+    <p>
+      <input name="group12" type="radio" id="test34" />
+      <label for="test34">No</label>
+    </p>
+    <p>
+      <input name="group12" type="radio" id="test35"  />
+      <label for="test35">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
 
     <div class="col m8">
-    <p>15. CONTINUE PROSECUTION OF PORK BARREL-RELATED CASES?</p>
+    <p>13. CONTINUE PROSECUTION OF PORK BARREL-RELATED CASES?</p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+    <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group13" type="radio" id="test35"/>
+      <label for="test35">Yes</label>
+    </p>
+    <p>
+      <input name="group13" type="radio" id="test36" />
+      <label for="test36">No</label>
+    </p>
+    <p>
+      <input name="group13" type="radio" id="test37"  />
+      <label for="test37">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
 
     <div class="col m8">
-    <p>16. PUSH FOR SAME-SEX MARRIAGE?</p>
+    <p>14. PUSH FOR SAME-SEX MARRIAGE?</p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+    <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group14" type="radio" id="test38"/>
+      <label for="test38">Yes</label>
+    </p>
+    <p>
+      <input name="group14" type="radio" id="test39" />
+      <label for="test39">No</label>
+    </p>
+    <p>
+      <input  name="group14" type="radio" id="test40"  />
+      <label for="test40">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
 
     <div class="col m8">
-    <p>11. BURY FERDINAND MARCOS' REMAINS AT THE LIBINGAN NG MGA BAYANI?</p>
+    <p>15. BURY FERDINAND MARCOS' REMAINS AT THE LIBINGAN NG MGA BAYANI?</p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+    <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group15" type="radio" id="test41"/>
+      <label for="test41">Yes</label>
+    </p>
+    <p>
+      <input name="group15" type="radio" id="test42" />
+      <label for="test42">No</label>
+    </p>
+    <p>
+      <input name="group15" type="radio" id="test43"  />
+      <label for="test43">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
+<hr>
 
 <div class="row">
 <div class="col m12">
 
     <div class="col m8">
-    <p>17. CONTINUE K-12 PROGRAM?</p>
+    <p>16. CONTINUE K-12 PROGRAM?</p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
-
-    </div>
-
-</div>
-</div>
-
-
-
-<div class="row">
-<div class="col m12">
-
-    <div class="col m8">
-    <p>18. CONTINUE THE COMPREHENSIVE AGRARIAN REFORM PROGRAM?</p>
-    </div>
-
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
+   <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group16" type="radio" id="test44"/>
+      <label for="test44">Yes</label>
+    </p>
+    <p>
+      <input name="group16" type="radio" id="test45" />
+      <label for="test45">No</label>
+    </p>
+    <p>
+      <input  name="group16" type="radio" id="test46"  />
+      <label for="test46">Undecided</label>
+    </p>
+      
+  </form>
 
     </div>
 
 </div>
 </div>
-
-
-
-
-
-<div class="row">
-<div class="col m12">
-
-    <div class="col m8">
-    <p>19. CONTINUE PEACE TALKS WITH THE REDS?</p>
-    </div>
-
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
-
-    </div>
-
-</div>
-</div>
-
-
-
-
-
-<div class="row">
-<div class="col m12">
-
-    <div class="col m8">
-    <p>20. GRANT BAIL TO EX-PRESIDENT GLORIA ARROYO?</p>
-    </div>
-
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
-  </div>
-
-    </div>
-
-</div>
-</div>
+<hr>
 
 
 
@@ -452,32 +492,191 @@
 <div class="col m12">
 
     <div class="col m8">
-    <p>21. GO AFTER THOSE BEHIND DAP?</p>
+    <p>17. CONTINUE THE COMPREHENSIVE AGRARIAN REFORM PROGRAM?</p>
     </div>
 
-    <div class="col m4">
-      <div class="switch">
-    <label>
-      DISSAGREE
-      <input type="checkbox">
-      <span class="lever"></span>
-     AGREE
-    </label>
+    <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group17" type="radio" id="test47"/>
+      <label for="test47">Yes</label>
+    </p>
+    <p>
+      <input name="group17" type="radio" id="test48" />
+      <label for="test48">No</label>
+    </p>
+    <p>
+      <input name="group17" type="radio" id="test49"  />
+      <label for="test49">Undecided</label>
+    </p>
+      
+  </form>
+
+    </div>
+
+</div>
+</div>
+<hr>
+
+
+
+
+<div class="row">
+<div class="col m12">
+
+    <div class="col m8">
+    <p>18. CONTINUE PEACE TALKS WITH THE REDS?</p>
+    </div>
+
+    <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group18" type="radio" id="test50"/>
+      <label for="test50">Yes</label>
+    </p>
+    <p>
+      <input name="group18" type="radio" id="test51" />
+      <label for="test51">No</label>
+    </p>
+    <p>
+      <input  name="group18" type="radio" id="test52"  />
+      <label for="test52">Undecided</label>
+    </p>
+      
+  </form>
+
+    </div>
+
+</div>
+</div>
+<hr>
+
+
+
+
+<div class="row">
+<div class="col m12">
+
+    <div class="col m8">
+    <p>19. GRANT BAIL TO EX-PRESIDENT GLORIA ARROYO?</p>
+    </div>
+
+   <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group19" type="radio" id="test53"/>
+      <label for="test53">Yes</label>
+    </p>
+    <p>
+      <input name="group19" type="radio" id="test54" />
+      <label for="test54">No</label>
+    </p>
+    <p>
+      <input name="group19" type="radio" id="test55"  />
+      <label for="test55">Undecided</label>
+    </p>
+      
+  </form>
+
+    </div>
+
+</div>
+</div>
+<hr>
+
+
+
+<div class="row">
+<div class="col m12">
+
+    <div class="col m8">
+    <p>20. GO AFTER THOSE BEHIND DAP?</p>
+    </div>
+
+  <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group20" type="radio" id="test56"/>
+      <label for="test56">Yes</label>
+    </p>
+    <p>
+      <input name="group20" type="radio" id="test57" />
+      <label for="test57">No</label>
+    </p>
+    <p>
+      <input name="group20" type="radio" id="test58"  />
+      <label for="test58">Undecided</label>
+    </p>
+      
+  </form>
+
+    </div>
+
+</div>
+</div>
+
+<hr>
+<div class="row">
+<div class="col m12">
+
+    <div class="col m8">
+    <p>21. PUSH FOR SAME-SEX MARRIAGE?</p>
+    </div>
+
+  <div class="col m4" class="valign-wrapper">
+    <form action="" class="valign">
+    <p>
+      <input name="group21" type="radio" id="test59"/>
+      <label for="test59">Yes</label>
+    </p>
+    <p>
+      <input name="group21" type="radio" id="test60" />
+      <label for="test60">No</label>
+    </p>
+    <p>
+      <input name="group21" type="radio" id="test61"  />
+      <label for="test61">Undecided</label>
+    </p>
+      
+  </form>
+
+    </div>
+
+</div>
+</div>
+
+<hr>
+
+
+
+
+
+
+</div>
+
+
+<div class="container">
+<div class="row">
+<div class="col m12"> 
+<div class="col offset-m10">
+ <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="openModal()">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+</div>
+</div>
+</div>
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Confirm</h4>
+      <p>Are you sure you want to submit this?</p>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-action waves-effect waves-green btn-flat">Agree</a>
+       <a class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
   </div>
-
-    </div>
-
-</div>
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
 
