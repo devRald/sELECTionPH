@@ -4,7 +4,7 @@ app.controller("QuizCtrl",["$scope","$location","$http",function($scope,$locatio
                     {issue_id:11,answers:""},{issue_id:12,answers:""},{issue_id:13,answers:""},{issue_id:14,answers:""},{issue_id:15,answers:""},
                     {issue_id:16,answers:""},{issue_id:17,answers:""},{issue_id:18,answers:""},{issue_id:19,answers:""},{issue_id:20,answers:""},
                     {issue_id:21,answers:""}];
-
+  $scope.selection = [{"can_id":1,score:0},{"can_id":2,score:0},{"can_id":3,score:0},{"can_id":4,score:0},{"can_id":5,score:0}];
   $scope.getSOI = function(){
     //get binay
     $http.get("../assets/binay.json").then(function(response){
@@ -33,12 +33,49 @@ app.controller("QuizCtrl",["$scope","$location","$http",function($scope,$locatio
   }
 
   $scope.generateCandidate = function(){
-
+    for(var i=0;i<$scope.ans.length;i++){
+      for(var j=0;j<$scope.selection.length;j++){
+        switch(j){
+          case 0:
+            if($scope.binay[i].summary == $scope.ans[i].answer){
+              $scope.selection[j].score++;
+            }
+            break;
+          case 1:
+            if($scope.miriam[i].summary == $scope.ans[i].answer){
+              $scope.selection[j].score++;
+            }
+            break;
+          case 2:
+            if($scope.duterte[i].summary == $scope.ans[i].answer){
+              $scope.selection[j].score++;
+            }
+            break;
+          case 3:
+            if($scope.poe[i].summary == $scope.ans[i].answer){
+              $scope.selection[j].score++;
+            }
+            break;
+          case 4:
+            if($scope.roxas[i].summary == $scope.ans[i].answer){
+              $scope.selection[j].score++;
+            }
+            break;
+        }  
+      }
+    }
+    console.log($scope.selection);
   } 
-  $scope.submitQuiz = function(){
-    console.log($scope.ans);
+
+  $scope.getTopThree = function(){
+    
   }
-  $scope.submitQuiz();
+
+  $scope.submitQuiz = function(){
+    $scope.generateCandidate();
+    $scope.getTopThree();
+    $('#modal1').closeModal();
+  }
   $scope.getSOI();
 
   $scope.openModal = function(){
