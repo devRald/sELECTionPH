@@ -6,6 +6,10 @@ app.controller("QuizCtrl",["$scope","$location","$http",function($scope,$locatio
                     {issue_id:21,answers:""}];
   $scope.selection = [{"can_id":1,score:0},{"can_id":2,score:0},{"can_id":3,score:0},{"can_id":4,score:0},{"can_id":5,score:0}];
   $scope.getSOI = function(){
+    $http.get("../assets/president.json").then(function(response){
+      $scope.pres = response.data;
+    });
+
     //get binay
     $http.get("../assets/binay.json").then(function(response){
       $scope.binay = response.data;
@@ -64,17 +68,40 @@ app.controller("QuizCtrl",["$scope","$location","$http",function($scope,$locatio
         }  
       }
     }
-    console.log($scope.selection);
   } 
 
-  $scope.getTopThree = function(){
-    
+  $scope.sortRank = function(){
+    for(var i=0;i<5;i++){
+      for(var j=0;j<5;j++){
+        console.log($scope.selection[j].score,$scope.selection[i].score,$scope.selection[j].score>$scope.selection[i].score);
+        if($scope.selection[j].score<$scope.selection[i].score){
+          var temp = $scope.selection[j];
+          $scope.selection[j] = $scope.selection[i];
+          $scope.selection[i] = temp;
+        }
+      }
+    }
+  }
+
+  $scope.getTop = function(){
+    $scope.top = [];
+    for(var i=0;i<3;i++){
+      for(var j=0;j<5;j++){
+        if($scope.selection[i].can_id==$scope.pres[j].can_id){
+          $scope.top.push($scope.pres[j]);
+          break;
+        }
+      } 
+    }
   }
 
   $scope.submitQuiz = function(){
     $scope.generateCandidate();
-    $scope.getTopThree();
+    $scope.sortRank();
+    $scope.getTop();
+    console.log($scope.selection);
     $('#modal1').closeModal();
+    $scope.openModal2();
   }
   $scope.getSOI();
 
