@@ -31,7 +31,20 @@ app.controller("HomeCtrl",["$scope","$rootScope","anchorSmoothScroll","$location
       $scope.pres = response.data;
     });
 
+    $http.get("http://localhost/ELECTIONPH/getAnalytics.php").then(function(response){
+      sessionStorage.setItem("chart",JSON.stringify(response.data));
+    });
 
     var deadline = new Date(2016,4,8,24,60,60,60);
     initializeClock('clockdiv', deadline);
+
+    //var ctx = $("#myChart").get(0).getContext("2d");
+    // This will get the first returned node in the jQuery collection.
+    //var myNewChart = new Chart(ctx);
+    //new Chart(ctx).PolarArea(data, options);
+    var data = [{"value":10,"color":"#ff6f00","highlight":"#ffa000","label":"Jejomar Binay"},{"value":11,"color":"#b71c1c","highlight":"#ef5350","label":"Mirian Defensor Santiago"},{"value":30,"color":"#1a237e","highlight":"#3949ab","label":"Rodrigo Duterte"},{"value":20,"color":"#2196f3","highlight":"#64b576","label":"Grace Poe"},{"value":5,"color":"#ffca28","highlight":"#fff176","label":"Mar Roxas"}];
+    var ctx = document.getElementById("myChart").getContext("2d");
+    //var myNewChart = new Chart(ctx).PolarArea(data);
+    var myDoughnutChart = new Chart(ctx).Doughnut(data);
+
 }]);

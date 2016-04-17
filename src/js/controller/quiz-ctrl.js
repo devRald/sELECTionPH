@@ -1,9 +1,9 @@
 app.controller("QuizCtrl",["$scope","$location","$http",function($scope,$location,$http){
-  $scope.ans = [{issue_id:1,answers:""},{issue_id:2,answers:""},{issue_id:3,answers:""},{issue_id:4,answers:""},{issue_id:5,answers:""},
-                    {issue_id:6,answers:""},{issue_id:7,answers:""},{issue_id:8,answers:""},{issue_id:9,answers:""},{issue_id:10,answers:""},
-                    {issue_id:11,answers:""},{issue_id:12,answers:""},{issue_id:13,answers:""},{issue_id:14,answers:""},{issue_id:15,answers:""},
-                    {issue_id:16,answers:""},{issue_id:17,answers:""},{issue_id:18,answers:""},{issue_id:19,answers:""},{issue_id:20,answers:""},
-                    {issue_id:21,answers:""}];
+  $scope.ans = [{issue_id:1,answer:""},{issue_id:2,answer:""},{issue_id:3,answer:""},{issue_id:4,answer:""},{issue_id:5,answer:""},
+                    {issue_id:6,answer:""},{issue_id:7,answer:""},{issue_id:8,answer:""},{issue_id:9,answer:""},{issue_id:10,answer:""},
+                    {issue_id:11,answer:""},{issue_id:12,answer:""},{issue_id:13,answer:""},{issue_id:14,answer:""},{issue_id:15,answer:""},
+                    {issue_id:16,answer:""},{issue_id:17,answer:""},{issue_id:18,answer:""},{issue_id:19,answer:""},{issue_id:20,answer:""},
+                    {issue_id:21,answer:""}];
   $scope.selection = [{"can_id":1,score:0},{"can_id":2,score:0},{"can_id":3,score:0},{"can_id":4,score:0},{"can_id":5,score:0}];
   $scope.getSOI = function(){
     $http.get("../assets/president.json").then(function(response){
@@ -73,7 +73,6 @@ app.controller("QuizCtrl",["$scope","$location","$http",function($scope,$locatio
   $scope.sortRank = function(){
     for(var i=0;i<5;i++){
       for(var j=0;j<5;j++){
-        console.log($scope.selection[j].score,$scope.selection[i].score,$scope.selection[j].score>$scope.selection[i].score);
         if($scope.selection[j].score<$scope.selection[i].score){
           var temp = $scope.selection[j];
           $scope.selection[j] = $scope.selection[i];
@@ -95,13 +94,29 @@ app.controller("QuizCtrl",["$scope","$location","$http",function($scope,$locatio
     }
   }
 
+  $scope.check = function(){
+    $scope.count = 0;
+    console.log($scope.ans);
+    for(var i=0;i<$scope.ans.length;i++){
+      if($scope.ans[i].answer != ""){
+        $scope.count++;
+      }
+    }
+  }
+
   $scope.submitQuiz = function(){
-    $scope.generateCandidate();
-    $scope.sortRank();
-    $scope.getTop();
-    console.log($scope.selection);
-    $('#modal1').closeModal();
-    $scope.openModal2();
+    $scope.check();
+    if($scope.count > 15){
+      $scope.generateCandidate();
+      $scope.sortRank();
+      $scope.getTop();
+      $http.post("http://localhost/ELECTIONPH/addVote.php",{can:$scope.top[0].can_id}).then(function(response){
+
+      });
+      console.log("yehey");
+      $('#modal1').closeModal();
+      $scope.openModal2();
+    }
   }
   $scope.getSOI();
 

@@ -140,7 +140,7 @@
     </p>
     <p>
       <input name="group5" type="radio" id="test14" value="No" ng-model="ans[4].answer"/>
-      <label for="test13">No</label>
+      <label for="test14">No</label>
     </p>
     <p>
       <input  name="group5" type="radio" id="test15" value="No Clear Stant" ng-model="ans[4].answer" />
@@ -316,8 +316,8 @@
    <div class="col m4" class="valign-wrapper">
     <form action="" class="valign">
     <p>
-      <input name="group11" type="radio" id="test30" value="Yes" ng-model="ans[10].answer"/>
-      <label for="test30">Yes</label>
+      <input name="group11" type="radio" id="test101" value="Yes" ng-model="ans[10].answer"/>
+      <label for="test101">Yes</label>
     </p>
     <p>
       <input name="group11" type="radio" id="test31" value="No" ng-model="ans[10].answer" />
@@ -697,20 +697,7 @@
 <div class="col m4">
   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="img/poe2.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Top 2</span>
-      
-    </div>
-    
-  </div>
-</div>
-
-<div class="col m4">
-  <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="img/duterte.jpg">
+      <img class="activator" src="{{top[0].can_img}}">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Top 1</span>
@@ -723,7 +710,20 @@
 <div class="col m4">
   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="img/binay.jpg">
+      <img class="activator" src="{{top[1].can_img}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Top 2</span>
+      
+    </div>
+    
+  </div>
+</div>
+
+<div class="col m4">
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{top[2].can_img}}">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4 ">Top 3<i class="material-icons right"></span>
