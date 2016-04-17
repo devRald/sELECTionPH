@@ -78,7 +78,15 @@ app.controller("QuizCtrl",["$scope","$location","$http",function($scope,$locatio
   }
   $scope.getSOI();
 
-  $scope.openModal = function(){
+ 
+ $scope.openModal = function(){
     $('#modal1').openModal({dismissible: false,opacity:0.8});
   }
+
+$scope.openModal2 = function(){
+    $('#modal2').openModal({dismissible: false,opacity:0.8});
+  }
+
+
+
 }]);

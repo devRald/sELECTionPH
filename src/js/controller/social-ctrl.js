@@ -11,4 +11,6 @@ app.controller("SocialCtrl",["$scope","$location","$firebaseArray",function($sco
   $scope.closeModal = function(){
      $('#modal1').closeModal();
   }
+
+
 }]);
